@@ -20,12 +20,10 @@ import (
 
 func twoStrings(s1 string, s2 string) string {
 	// Write your code here
+	letters := make(map[rune]int)
 	for _, letter := range s1 {
-		if strings.ContainsRune(s2, letter) {
-			return "Yes"
-		}
+		letters[letter]++
 	}
-	return "No"
 }
 
 func main() {
